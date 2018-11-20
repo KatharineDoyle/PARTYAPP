@@ -6,5 +6,6 @@ class Space < ApplicationRecord
   validates :capacity, numericality: { only_integer: true }
 
   has_many :reviews, dependent: :destroy
+  has_many :bookings, dependent: :destroy
   belongs_to :user
 end
