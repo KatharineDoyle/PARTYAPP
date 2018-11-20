@@ -12,10 +12,12 @@ class SpacesController < ApplicationController
   end
 
   def new
+    @user = User.find(params[:user_id])
     @space = Space.new
   end
 
   def create
+    @user = User.find(params[:user_id])
     @space = Space.new(space_params)
     @space.user = current_user
     if @space.save
@@ -46,6 +48,6 @@ class SpacesController < ApplicationController
   end
 
   def space_params
-    params.require(:space).permit(:name, :address, :capacity, :availability)
+    params.require(:space).permit(:name, :address, :capacity, :availability, :user_id)
   end
 end
