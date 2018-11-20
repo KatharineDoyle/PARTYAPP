@@ -19,13 +19,26 @@ class SpacesController < ApplicationController
     @space = Space.new(space_params)
     @space.user = current_user
     if @space.save
-      redirect_to @space, notice: 'Restaurant was successfully created.'
+      redirect_to @space, notice: 'Space was successfully created.'
     else
       render 'new'
     end
   end
 
+  def update
+    if @space.update(space_params)
+      redirect_to @space, notice: 'Space was successfully updated.'
+    else
+      render :edit
+    end
+  end
+
   private
+
+  def set_space
+    @space = Space.find(params[:id])
+    authorize @space
+  end
 
   def space_params
     params.require(:space).permit(:name, :address, :capacity, :availabilty, :photo)

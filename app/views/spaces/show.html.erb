@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @space.name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @space.user.email %>
+</p>
+
+<% if policy(@space).edit? %>
+<%= link_to 'Edit', edit_space_path(@space) %> |
+<% end %>
+<%= link_to 'Back', spaces_path %>
