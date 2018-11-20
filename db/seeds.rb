@@ -16,35 +16,35 @@ spaces_attributes = [
     address:      "10969 Berlin, Germany",
     description:  "Coding Bootcamp and party space. Great for Beer Pong!",
     capacity:      300,
-    availabilty:   true
+    availability:   true
   },
   {
     name:         "Techno Keller",
     address:      "12043 Berlin, Germany",
     description:  "Small Keller we use for AirBnB and small techno parties.",
     capacity:      10,
-    availabilty:   true
+    availability:   true
   },
   {
     name:         "Naturkundesmuseum",
     address:      "10115 Berlin, Germany",
     description:  "Entire museum. Party with Tristan.",
     capacity:      5000,
-    availabilty:   true
+    availability:   true
   },
   {
     name:         "Tent in Tempelhof",
     address:      "10115 Berlin, Germany",
     description:  "Five person tent pitched in the middle of Tempelhof.",
     capacity:      5,
-    availabilty:   true
+    availability:   true
   },
     {
     name:         "My friend's apartment",
     address:      "12044 Berlin, Germany",
     description:  "Small apartment Neukölln. Daytime parties only.",
     capacity:      100,
-    availabilty:   true
+    availability:   true
   }
 ]
 
