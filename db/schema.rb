@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2018_11_20_161647) do
     t.string "name"
     t.text "description"
     t.bigint "user_id"
+    t.string "photo"
     t.index ["user_id"], name: "index_spaces_on_user_id"
   end
 
