@@ -8,14 +8,24 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @user = current_user
+    @space = Space.find(params[:space_id])
     @booking = Booking.new(booking_params)
+    @booking.space = @space
     @booking.user = current_user
     if @booking.save
-      redirect_to @booking, notice: 'Booking was successfully created.'
+      redirect_to booking_path(@booking), notice: 'Booking was successfully created.'
     else
-      render 'new'
+      redirect_to space_path(@space)
     end
+  end
+
+  def index
+    @bookings = Booking.where(user_id: current_user.id)
+  end
+
+  def show
+    find_and_authorize_current_booking
+    @space = booking.space
   end
 
   private
