@@ -1,18 +1,15 @@
 class BookingsController < ApplicationController
   before_action :find_and_authorize_current_booking, only: [:show, :edit, :update, :destroy]
 
-  def new
-    @user = current_user
-    @booking = Booking.new
-  end
-
   def create
+    @user = current_user
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     if @booking.save
       redirect_to @booking, notice: 'Booking was successfully created.'
     else
       render 'new'
+    end
   end
 
   private
@@ -23,6 +20,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:date, :theme, :user_id, :spaces_id)
+    params.require(:booking).permit(:date, :theme, :user_id, :space_id)
   end
 end
