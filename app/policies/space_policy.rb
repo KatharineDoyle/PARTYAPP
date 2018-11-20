@@ -1,14 +1,19 @@
 class SpacePolicy < ApplicationPolicy
-  def create?
+  def show?
     true
   end
 
   def update?
-    record.user == user
+    space.user == user
   end
 
   def destroy
-    record.user == user
+    space.user == user
+  end
+
+  def space
+    # record is an instance of Space
+    record
   end
 
   class Scope < Scope

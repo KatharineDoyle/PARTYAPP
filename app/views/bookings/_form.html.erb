@@ -1,15 +1,9 @@
-<%= simple_form_for [@space, @booking] %>
-
-<%= @booking.each do |b| %>
-<% b.label :name %>
-<%= b.text_field :name, class: 'form-control' %>
+<%= simple_form_for ([@space, @booking]) do  |b|  %>
+<%= b.input :theme , class: 'form-control' %>
 </div>
 <div class="form-group">
-  <%= t.label :address %>
-  <%= t.text_field :address, class: 'form-control' %>
+  <%= b.input :date, class: 'form-control' %>
 </div>
-<div class="form-group">
-  <%= t.label :category %>
-  <%= t.text_field :category, class: 'form-control' %>
-</div>
-<% %>
+<div class="form-actions">
+    <%= b.button :submit %>
+<% end %>

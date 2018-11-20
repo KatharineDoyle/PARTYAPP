@@ -1,0 +1,9 @@
+<div class="text-center padded">
+  <h2>All my stays</h2>
+</div>
+
+<% @bookings.each do |booking| %>
+  <h2><%= booking.space.name %></h2>
+  <p>City: <strong><%= booking.space.description %></strong></p>
+  <p>Address: <strong><%= booking.space.address %></strong></p>
+<% end %>

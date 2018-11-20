@@ -1,0 +1,18 @@
+<h1><%= @space.name %></h1>
+
+<br>
+
+<h3>Review <%= @space.name %></h3>
+<%= simple_form_for([@space, @review]) do |f| %>
+    <%= f.input :content %>
+    <%= f.submit %>
+<% end %>
+
+<h3>Reviews</h3>
+
+<ul>
+  <% @space.reviews.each do |review| %>
+    <li>
+      <p><%= review.content %></p>
+    </li>
+  <% end %>

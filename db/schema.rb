@@ -19,10 +19,9 @@ ActiveRecord::Schema.define(version: 2018_11_20_121315) do
     t.string "date"
     t.string "theme"
     t.bigint "user_id"
-    t.bigint "spaces_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["spaces_id"], name: "index_bookings_on_spaces_id"
+    t.integer "spaces_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
@@ -58,7 +57,6 @@ ActiveRecord::Schema.define(version: 2018_11_20_121315) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "bookings", "spaces", column: "spaces_id"
   add_foreign_key "bookings", "users"
   add_foreign_key "reviews", "spaces"
   add_foreign_key "spaces", "users"
