@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Spaces</h1>
+<h1 id="spaces-title">Spaces</h1>
 
-<table>
+<!-- <table>
   <thead>
     <tr>
       <th>Name</th>
@@ -10,27 +10,40 @@
       <th colspan="3"></th>
     </tr>
   </thead>
+</table> -->
 
-  <tbody>
-    <% @spaces.each do |space| %>
-      <tr>
-        <td><%= space.name %></td>
-        <td><%= space.user.email %></td>
-        <% if policy(space).create? %>
-        <td><%= link_to 'New Space', new_space_path %></td>
-        <% end %>
-        <td><%= link_to 'Show', space %></td>
-        <% if policy(space).edit? %>
-          <td><%= link_to 'Edit', edit_space_path(space) %></td>
-        <% end %>
-        <% if policy(space).destroy? %>
-          <td><%= link_to 'Destroy', space, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<br><br>
 
-<br>
+<div class="container">
+     <div class="row">
+      <div class="row">
+        <% @spaces.each do |space| %>
+          <div class="col-xs-12 col-sm-6 lg-4">
+            <div class="card-space">
+            <h4><%= space.name %></h4>
+              <p><%= space.description %></p>
+              <p>Capacity <%= space.capacity %></p>
+              <p><%= space.address %></p>
+              <p>Available <%= space.availability ? "✅" : "🚫" %></p>
+              <% if policy(space).create? %>
+              <% end %>
+              <p><%= link_to 'Check it out', space %></p>
+              <% if policy(space).edit? %>
+                <p><%= link_to 'Edit', edit_space_path(space) %></p>
+              <% end %>
+              <% if policy(space).destroy? %>
+                <p><%= link_to 'Destroy', space, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+            </div>
+            </div>
+        <% end %>
+       </div>
+    </div>
+  <% end %>
+         <div class="card col-xs-12 col-sm-6 lg-4">
+        <p><%= link_to 'New Space', new_space_path %></p>
+      </div>
+</div>
+
+
 
 
