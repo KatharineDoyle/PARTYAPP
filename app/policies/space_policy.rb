@@ -1,7 +1,4 @@
 class SpacePolicy < ApplicationPolicy
-  def create?
-    true
-  end
 
   def update?
     record.user == user
