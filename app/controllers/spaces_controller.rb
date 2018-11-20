@@ -2,8 +2,8 @@ class SpacesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index]
 
   def index
-    # @spaces = Space.all
-    @restaurants = policy_scope(Space).order(created_at: :desc)
+    @spaces = Space.all
+    @spaces = policy_scope(Space).order(created_at: :desc)
   end
 
   def show
@@ -33,6 +33,11 @@ class SpacesController < ApplicationController
     end
   end
 
+  def destroy
+    @spaces = Space.find(params[:id])
+    @space = Space.destroy
+  end
+
   private
 
   def set_space
@@ -41,6 +46,6 @@ class SpacesController < ApplicationController
   end
 
   def space_params
-    params.require(:space).permit(:name, :address, :capacity, :availabilty, :photo)
+    params.require(:space).permit(:name, :address, :capacity, :availability)
   end
 end

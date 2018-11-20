@@ -16,7 +16,7 @@
       <tr>
         <td><%= space.name %></td>
         <td><%= space.user.email %></td>
-        <% if policy(Space).create? %>
+        <% if policy(space).create? %>
         <td><%= link_to 'New Space', new_space_path %></td>
         <% end %>
         <td><%= link_to 'Show', space %></td>
