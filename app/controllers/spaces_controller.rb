@@ -12,14 +12,14 @@ class SpacesController < ApplicationController
   end
 
   def new
-    @user = User.find(params[:user_id])
+    @user = current_user
     @space = Space.new
   end
 
   def create
-    @user = User.find(params[:user_id])
+    @user = current_user
     @space = Space.new(space_params)
-    @space.user = current_user
+    @space.user = @user
     if @space.save
       redirect_to @space, notice: 'Space was successfully created.'
     else

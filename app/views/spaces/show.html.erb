@@ -7,10 +7,9 @@
 
 <p>
   <strong>User:</strong>
-  <%= @space.user.email %>
-</p>
+ </p>
 
 <% if policy(@space).edit? %>
-<%= link_to 'Edit', edit_space_path(@space) %> |
+
 <% end %>
 <%= link_to 'Back', spaces_path %>
