@@ -1,0 +1,5 @@
+<h1>Review <%= @space.name %></h1>
+<%= simple_form_for([@space, @review]) do |f| %>
+    <%= f.input :content %>
+    <%= f.submit %>
+<% end %>
