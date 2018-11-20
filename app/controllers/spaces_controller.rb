@@ -23,9 +23,14 @@ class SpacesController < ApplicationController
     end
   end
 
+  def destroy
+    @spaces = Space.find(params[:id])
+    @space = Space.destroy
+  end
+
   private
 
   def space_params
-    params.require(:space).permit(:name, :address, :capacity, :availabilty, :photo)
+    params.require(:space).permit(:name, :address, :capacity, :availability)
   end
 end
