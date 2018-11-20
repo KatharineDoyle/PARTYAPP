@@ -3,7 +3,7 @@ class SpacesController < ApplicationController
 
   def index
     # @spaces = Space.all
-    @restaurants = policy_scope(Space)
+    @restaurants = policy_scope(Space).order(created_at: :desc)
   end
 
   def show
