@@ -1,6 +1,12 @@
 class BookingsController < ApplicationController
   before_action :find_and_authorize_current_booking, only: [:show, :edit, :update, :destroy]
 
+  def new
+    @user = current_user
+    @space = Space.find(params[:space_id])
+    @booking = Booking.new
+  end
+
   def create
     @user = current_user
     @booking = Booking.new(booking_params)
