@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "home#index"
+  root to: "spaces#index"
 
   resources :spaces do
     resources :reviews, only: [ :new, :create ]
