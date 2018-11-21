@@ -8,21 +8,35 @@
         <%= cl_image_tag @space.photo, height: 400, width: 800, crop: :fill %>
         <p><%= @space.description %></p>
         <p><%= @space.address %></p>
+         <h4>Reviews</h4>
+         <ul>
+            <% @space.reviews.each do |review| %>
+            <li>
+            <p><%= review.content %></p>
+            </li>
+            <% end %>
+          </ul>
+        <h4>Add a review:</h4>
+          <%= simple_form_for [@space, @review] do |f| %>
+          <%= f.input :content%>
+          <%= f.submit %>
+          <% end %>
+        <br><br>
         <% if policy(@space).edit? %>
         <% end %>
-        <p> <%= link_to "Book your party", '#', class: 'btn-blue' %></p>
+        <p> <%= link_to "Book your party", '#', class: "btn btn-primary" %></p>
         <% if policy(@space).edit? %>
         <% end %>
         <%= link_to 'Back', spaces_path %>
       </div>
-    </div>
+      </div>
 
-   <div class="map-cal l-flex-child l-grid-half">
-      <div class="example-item">
+
+      <div class="map-cal l-grid-half">
         <div
         id="map"
         style="width: 50vw;
-        height: 600px;"
+        height: 100vh;"
         data-markers="<%= @markers.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
@@ -30,4 +44,5 @@
   </div>
 </div>
 </div>
+
 
