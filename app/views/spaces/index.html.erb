@@ -42,4 +42,13 @@
         <div class="card col-xs-12 col-sm-6 lg-4">
           <p><%= link_to 'New Space', new_space_path %></p>
         </div>
+
+      <div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['pk.eyJ1Ijoic2FtamIiLCJhIjoiY2pvOGdqODF4MGNkbTNxcDkyb2F3eXp1byJ9.a1xxCGW5lxLXnFeGNSdNwA
+'] %>"
+></div>
 </div>
