@@ -1,11 +1,11 @@
-<p id="notice"><%= notice %></p>
-
+<!-- <p id="notice"><%= notice %></p>
+ -->
 <div class="l-flex-fix">
   <div class="l-flex-parent">
-      <div class="space-info l-flex-child l-grid-half">
-        <h2 class="text-center"><%= @space.name %></h2>
+      <div class="space-info">
         <div class="example-item">
-        <%= cl_image_tag @space.photo, height: 400, width: 800, crop: :fill %>
+        <%= cl_image_tag @space.photo, height: 300, width: 800, crop: :fill %>
+        <h2 class="text-center"><%= @space.name %></h2>
         <p><%= @space.description %></p>
         <p><%= @space.address %></p>
         <% if policy(@space).edit? %>
@@ -17,8 +17,7 @@
       </div>
     </div>
 
-   <div class="map-cal l-flex-child l-grid-half">
-      <div class="example-item">
+   <div class="map-cal l-grid-half">
         <div
         id="map"
         style="width: 50vw;
@@ -26,6 +25,7 @@
         data-markers="<%= @markers.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
+      <div class="example-item">
     </div>
   </div>
 </div>

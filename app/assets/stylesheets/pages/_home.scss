@@ -15,11 +15,12 @@ body {
   border-radius:5px;
   max-width:15em;
 }
-.l-grid-half {
-  width: 50%;
-}
+// .l-grid-half {
+//   width: 50%;
+// }
 
 .l-flex-parent {
+
   display:flex;
   flex-direction:row;
 
@@ -28,13 +29,14 @@ body {
   padding:1em;
   min-height: 100vh;
   align-items: center;
-  display:flex;
+  display:flex; //if you have items within the child you'll need to make it display flex
   justify-content: center;
   flex-direction: column;
 
 }
 .space-info {
   color:#fff;
+  width: 70%
 }
 .map-cal {
   background-color: #fff;
