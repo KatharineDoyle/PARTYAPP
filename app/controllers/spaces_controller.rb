@@ -5,12 +5,12 @@ class SpacesController < ApplicationController
   def index
     @spaces = policy_scope(Space).order(created_at: :desc)
     geospaces = @spaces.where.not(latitude: nil, longitude: nil)
-    @markers = geospaces.map do |geospace|
-      {
-        lng: geospace.longitude,
-        lat: geospace.latitude
-      }
-    end
+    # @markers = geospaces.map do |geospace|
+    #   {
+    #     lng: geospace.longitude,
+    #     lat: geospace.latitude
+    #   }
+    # end
   end
 
   def new
