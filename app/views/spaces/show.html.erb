@@ -1,4 +1,17 @@
 <p id="notice"><%= notice %></p>
+<body>
+
+<div class="flex-container">
+  <div class="card-container">
+   <div class="row">
+    <div class ="col-xs-12 col-sm-6 col-md-4 col-lg-3 flex-item">
+      <h2 class="text-center"><%= @space.name %></h2>
+      <%= cl_image_tag @space.photo, height: 300, width: 400, crop: :fill %>
+      <p><%= @space.description %></p>
+      <p><%= @space.address %></p>
+      <% if policy(@space).edit? %>
+      <p> <%= link_to "Book your party", new_space_booking_path(@space), class: 'btn-blue' %></p>
+      <p><%= link_to 'Back', spaces_path %></p>
 
 <div class="l-flex-fix">
   <div class="l-flex-parent">
@@ -32,7 +45,10 @@
       </div>
 
 
-      <div class="map-cal l-grid-half">
+   <div class="map-cal l-grid-half">
+   <div class="map-cal l-flex-child l-grid-half">
+      <div class="example-item">
+
         <div
         id="map"
         style="width: 50vw;
@@ -45,4 +61,9 @@
 </div>
 </div>
 
+<% end %>
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 810ca36c7d062eb6d56835e329526f5735237b12
