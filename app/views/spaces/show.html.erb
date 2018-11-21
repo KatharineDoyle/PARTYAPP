@@ -10,21 +10,12 @@
       <p><%= @space.address %></p>
       <% if policy(@space).edit? %>
       <% end %>
-      <p> <%= link_to "Book your party", '#', class: 'btn-blue' %>
-</p>
+      <p> <%= link_to "Book your party", new_space_booking_path(@space), class: 'btn-blue' %></p>
       <p><%= link_to 'Back', spaces_path %></p>
     </div>
   </div>
 </div>
 </div>
 
-<!--
-<button type="btn-blue">Book your party</button>'
- -->
-
-
-<% if policy(@space).edit? %>
-
 <% end %>
-<%= link_to 'Back', spaces_path %>
-<%= link_to 'Book your party!', new_space_booking_path(@space) %>
+

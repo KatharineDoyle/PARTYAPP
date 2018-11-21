@@ -1,5 +1,58 @@
-// Specific CSS for your home-page
-
-.flex-container {
-  justify-content: space-between;
+body {
+  font-family: 'Open sans', sans-serif;
+  font-size:100%;
+  line-height:1.5;
 }
+* {
+  box-sizing: border-box;
+}
+
+.card-space {
+  border-radius: 20px;
+}
+.example-item {
+  padding:1em;
+  border-radius:5px;
+  max-width:15em;
+}
+.l-grid-half {
+  width: 50%;
+}
+
+.l-flex-parent {
+  //by having a parent with flex-direction:row, the min-height bug in IE doesn't stick around.
+  display:flex;
+  flex-direction:row;
+
+}
+.l-flex-child {
+  padding:1em;
+  min-height: 100vh;
+  align-items: center;
+  display:flex; //if you have items within the child you'll need to make it display flex
+  justify-content: center;
+  flex-direction: column;
+
+}
+.space-info {
+  background-color: blue;
+  color:#fff;
+}
+.map-cal {
+  background-color: #fff;
+  color:  #7b5a9e;
+}
+.t-white .example-item {
+  background:  #7b5a9e;
+  color: #fff;
+}
+
+.t-purple .example-item {
+
+  background:#fff;
+  color:#000;
+
+}
+
+
+

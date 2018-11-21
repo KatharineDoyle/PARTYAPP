@@ -20,11 +20,10 @@ class BookingsController < ApplicationController
   end
 
   def index
-    @bookings = Booking.where(user_id: current_user.id)
+    @booking = Booking.where(user_id: current_user.id)
   end
 
   def show
-    find_and_authorize_current_booking
     @space = booking.space
   end
 
