@@ -12,26 +12,26 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.space = @space
     @booking.user = current_user
-    if @booking.save
-      redirect_to booking_path(@booking), notice: 'Booking was successfully created.'
+    if @booking.save!
+      redirect_to space_bookings_path, notice: 'Booking was successfully created.'
     else
       redirect_to space_path(@space)
     end
   end
 
   def index
-    @booking = Booking.where(user_id: current_user.id)
+    @bookings = Booking.where(user_id: current_user.id)
   end
 
   def show
-    @space = booking.space
+    @booking
   end
 
   private
 
   def find_and_authorize_current_booking
     @booking = Booking.find(params[:id])
-    authorize @booking
+    # authorize @booking
   end
 
   def booking_params

@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<body>
+
 <div class="flex-container">
   <div class="card-container">
    <div class="row">
@@ -9,13 +11,11 @@
       <p><%= @space.description %></p>
       <p><%= @space.address %></p>
       <% if policy(@space).edit? %>
-      <% end %>
       <p> <%= link_to "Book your party", new_space_booking_path(@space), class: 'btn-blue' %></p>
       <p><%= link_to 'Back', spaces_path %></p>
     </div>
   </div>
 </div>
 </div>
-
 <% end %>
 
