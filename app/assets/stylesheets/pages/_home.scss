@@ -2,7 +2,6 @@
 body {
   font-size:100%;
   line-height:1.5;
-  background-image: url('http://mrsocialkeeda.com/wp-content/uploads/2016/12/party-06.jpg')
   // background: #a770ef; /* fallback for old browsers */
   // background: -webkit-linear-gradient(to bottom, #a770ef, #cf8bf3, #fdb99b); /* Chrome 10-25, Safari 5.1-6 */
   // background: linear-gradient(to bottom, #a770ef, #cf8bf3, #fdb99b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -11,6 +10,16 @@ body {
   box-sizing: border-box
 }
 
+<<<<<<< HEAD
+h1, h2 {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 10px;
+  text-align: center;
+}
+
+p {
+  text-size: 30px;
+=======
 h1, h2, h3, h4 {
   font-family: 'Chivo', sans-serif;
   font-weight: 10px;
@@ -25,6 +34,8 @@ h1, h2, h3, h4 {
 p {
   font-size: 15px;
   color: black;
+
+>>>>>>> 810ca36c7d062eb6d56835e329526f5735237b12
 }
 
 .card-space {
@@ -56,7 +67,7 @@ p {
 }
 .space-info {
   color:#fff;
-  width: 70%;
+  width: 70%
 }
 .map-cal {
   background-color: #fff;
@@ -71,8 +82,5 @@ p {
 
   background:#fff;
   color:#000;
-
 }
-
-
 
