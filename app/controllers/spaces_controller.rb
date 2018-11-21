@@ -4,12 +4,16 @@ class SpacesController < ApplicationController
 
   def index
     @spaces = policy_scope(Space).order(created_at: :desc)
+  end
+
+  def show
+    @spaces = policy_scope(Space).order(created_at: :desc)
     geospaces = @spaces.where.not(latitude: nil, longitude: nil)
     @markers = geospaces.map do |geospace|
       {
         lng: geospace.longitude,
         lat: geospace.latitude,
-        # infoWindow: { content: render_to_string(partial: "/spaces/map_window", locals: { space: space }) }
+        infoWindow: { content: render_to_string(partial: "/spaces/map_window", locals: { space: geospace }) }
       }
     end
   end
