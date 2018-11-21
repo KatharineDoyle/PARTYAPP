@@ -1,27 +1,39 @@
 
 body {
-  font-family: 'Open sans', sans-serif;
   font-size:100%;
   line-height:1.5;
+  // background: #a770ef; /* fallback for old browsers */
+  // background: -webkit-linear-gradient(to bottom, #a770ef, #cf8bf3, #fdb99b); /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(to bottom, #a770ef, #cf8bf3, #fdb99b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 * {
-  box-sizing: border-box;
+  box-sizing: border-box
+}
+
+h1, h2 {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 10px;
+  text-align: center;
+}
+
+p {
+  text-size: 30px;
 }
 
 .card-space {
   border-radius: 20px;
+  justify-content: center;
 }
-.example-item {
+.show-half {
   padding:1em;
   border-radius:5px;
   max-width:15em;
 }
-.l-grid-half {
-  width: 50%;
-}
+// .l-grid-half {
+//   width: 50%;
+// }
 
 .l-flex-parent {
-  //by having a parent with flex-direction:row, the min-height bug in IE doesn't stick around.
   display:flex;
   flex-direction:row;
 
@@ -30,14 +42,14 @@ body {
   padding:1em;
   min-height: 100vh;
   align-items: center;
-  display:flex; //if you have items within the child you'll need to make it display flex
+  display:flex;
   justify-content: center;
   flex-direction: column;
 
 }
 .space-info {
-  background-color: blue;
   color:#fff;
+  width: 70%
 }
 .map-cal {
   background-color: #fff;
