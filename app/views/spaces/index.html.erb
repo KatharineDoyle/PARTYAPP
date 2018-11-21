@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<div class="container">
 <h1 id="spaces-title">Spaces</h1>
 
 <!-- <table>
@@ -14,32 +15,31 @@
 
 <br><br>
 
-<div class="container">
      <div class="row">
       <div class="row">
         <% @spaces.each do |space| %>
           <div class="col-xs-12 col-sm-6 lg-4">
             <div class="card-space">
-            <h4><%= space.name %></h4>
-              <p><%= space.description %></p>
-              <p>Capacity <%= space.capacity %></p>
-              <p><%= space.address %></p>
-              <p>Available <%= space.availability ? "✅" : "🚫" %></p>
-              <% if policy(space).create? %>
+                <h4><%= space.name %></h4>
+                  <p><%= space.description %></p>
+                  <p>Capacity <%= space.capacity %></p>
+                  <p><%= space.address %></p>
+                  <p>Available <%= space.availability ? "✅" : "🚫" %></p>
+                  <% if policy(space).create? %>
+                  <% end %>
+                  <p><%= link_to 'Check it out', space %></p>
+                  <% if policy(space).edit? %>
+                    <p><%= link_to 'Edit', edit_space_path(space) %></p>
+                  <% end %>
+                  <% if policy(space).destroy? %>
+                    <p><%= link_to 'Destroy', space, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+                  </div>
+                </div>
               <% end %>
-              <p><%= link_to 'Check it out', space %></p>
-              <% if policy(space).edit? %>
-                <p><%= link_to 'Edit', edit_space_path(space) %></p>
-              <% end %>
-              <% if policy(space).destroy? %>
-                <p><%= link_to 'Destroy', space, method: :delete, data: { confirm: 'Are you sure?' } %></p>
             </div>
-            </div>
-        <% end %>
-       </div>
-    </div>
-  <% end %>
-         <div class="card col-xs-12 col-sm-6 lg-4">
-        <p><%= link_to 'New Space', new_space_path %></p>
-      </div>
+          </div>
+          <% end %>
+        <div class="card col-xs-12 col-sm-6 lg-4">
+          <p><%= link_to 'New Space', new_space_path %></p>
+        </div>
 </div>

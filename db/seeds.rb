@@ -13,42 +13,42 @@ puts 'Creating spaces...'
 spaces_attributes = [
   {
     name:         "Le Wagon Berlin",
-    address:      "10969 Berlin, Germany",
-    description:  "Coding Bootcamp and party space. Great for Beer Pong!",
+    address:      "Rudi-Dutschke-Straße 26, 10969 Berlin",
+    description:  "Coding Bootcamp and party space. Big beer fridge and beer pong set!",
     capacity:      300,
-    availability:   true,
+    availability:  true,
     user_id:       1
   },
   {
-    name:         "Techno Keller",
-    address:      "12043 Berlin, Germany",
-    description:  "Small Keller we use for AirBnB and small techno parties.",
+    name:         "Techno Van",
+    address:      "Möckernstraße 26, 10963 Berlin",
+    description:  "Small van we use for AirBnB and techno parties.",
     capacity:      10,
-    availability:   true,
+    availability:  true,
     user_id:       2
   },
   {
     name:         "Naturkundesmuseum",
-    address:      "10115 Berlin, Germany",
+    address:      "Invalidenstraße 43, 10115 Berlin",
     description:  "Entire museum. Party with Tristan.",
-    capacity:      5000,
-    availability:   true,
+    capacity:      3000,
+    availability:  true,
     user_id:       1
   },
   {
     name:         "Tent in Tempelhof",
-    address:      "10115 Berlin, Germany",
-    description:  "Five person tent pitched in the middle of Tempelhof.",
+    address:      "Platz der Luftbrücke 5, 12101 Berlin",
+    description:  "Five person tent pitched in the middle of Tempelhof. Daytime parties only.",
     capacity:      5,
-    availability:   true,
+    availability:  true,
     user_id:       2
   },
     {
-    name:         "My friend's apartment",
-    address:      "12044 Berlin, Germany",
-    description:  "Small apartment Neukölln. Daytime parties only.",
-    capacity:      100,
-    availability:   true,
+    name:         "IKEA",
+    address:      "Sachsendamm 47, 10829 Berlin",
+    description:  "Huge furniture warehouse. Perfect for raves.",
+    capacity:      5000,
+    availability:  true,
     user_id:       2
   }
 ]
