@@ -10,7 +10,7 @@ body {
 .card-space {
   border-radius: 20px;
 }
-.example-item {
+.show-half {
   padding:1em;
   border-radius:5px;
   max-width:15em;
@@ -20,7 +20,6 @@ body {
 }
 
 .l-flex-parent {
-  //by having a parent with flex-direction:row, the min-height bug in IE doesn't stick around.
   display:flex;
   flex-direction:row;
 
@@ -29,13 +28,12 @@ body {
   padding:1em;
   min-height: 100vh;
   align-items: center;
-  display:flex; //if you have items within the child you'll need to make it display flex
+  display:flex;
   justify-content: center;
   flex-direction: column;
 
 }
 .space-info {
-  background-color: blue;
   color:#fff;
 }
 .map-cal {
