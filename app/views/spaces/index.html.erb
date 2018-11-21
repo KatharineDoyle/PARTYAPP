@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container">
+<h1 id="spaces-title">SPACES</h1>
+
 <h1 id="spaces-title">Spaces</h1>
 
 <!-- <table>
@@ -12,12 +14,13 @@
     </tr>
   </thead>
 </table> -->
-
 <br><br>
 
      <div class="row">
       <div class="row">
         <% @spaces.each do |space| %>
+          <div class="col-xs-12 col-sm-4 lg-4">
+            <div class="card card-space">
           <div class="col-xs-12 col-sm-6 lg-4">
             <div class="card-space">
                 <h4><%= space.name %></h4>
@@ -38,9 +41,17 @@
               <% end %>
             </div>
           </div>
+
+        <% end %>
+        <%= link_to 'Add a space!', new_space_path %>
+      </div>
+    </div>
+  </div>
           <% end %>
         <div class="card col-xs-12 col-sm-6 lg-4">
           <p><%= link_to 'New Space', new_space_path %></p>
         </div>
-
 </div>
+
+
+

@@ -1,23 +1,37 @@
+
 body {
-  font-family: 'Open sans', sans-serif;
   font-size:100%;
   line-height:1.5;
+  // background: #a770ef; /* fallback for old browsers */
+  // background: -webkit-linear-gradient(to bottom, #a770ef, #cf8bf3, #fdb99b); /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(to bottom, #a770ef, #cf8bf3, #fdb99b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 * {
-  box-sizing: border-box;
+  box-sizing: border-box
+}
+
+h1, h2 {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 10px;
+  text-align: center;
+}
+
+p {
+  text-size: 30px;
 }
 
 .card-space {
   border-radius: 20px;
+  justify-content: center;
 }
 .show-half {
   padding:1em;
   border-radius:5px;
   max-width:15em;
 }
-.l-grid-half {
-  width: 50%;
-}
+// .l-grid-half {
+//   width: 50%;
+// }
 
 .l-flex-parent {
   display:flex;
@@ -35,6 +49,7 @@ body {
 }
 .space-info {
   color:#fff;
+  width: 70%
 }
 .map-cal {
   background-color: #fff;
