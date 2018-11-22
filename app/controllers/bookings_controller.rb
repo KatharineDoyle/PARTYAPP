@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :find_and_authorize_current_booking, only: [:show, :edit, :update, :destroy]
+  before_action :find_and_authorize_current_booking, only: [:show, :edit, :update, :destroy, :create]
 
   def new
     @user = current_user
@@ -25,7 +25,8 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @booking
+    # @booking = Booking.find(params[:id])
+    @space = @booking.space
   end
 
   def destroy
@@ -36,6 +37,7 @@ class BookingsController < ApplicationController
 
   def find_and_authorize_current_booking
     @booking = Booking.find(params[:id])
+    raise
     authorize @booking
   end
 
