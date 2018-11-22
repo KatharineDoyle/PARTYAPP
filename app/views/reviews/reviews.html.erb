@@ -5,7 +5,7 @@
 <h3>Review <%= @space.name %></h3>
 <%= simple_form_for([@space, @review]) do |f| %>
     <%= f.input :content %>
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-primary" %>
 <% end %>
 
 <h3>Reviews</h3>

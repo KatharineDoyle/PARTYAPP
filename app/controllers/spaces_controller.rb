@@ -9,6 +9,7 @@ class SpacesController < ApplicationController
   def show
     @spaces = policy_scope(Space).order(created_at: :desc)
     geospaces = @spaces.where.not(latitude: nil, longitude: nil)
+    @review = Review.new
     @markers = geospaces.map do |geospace|
       {
         lng: geospace.longitude,

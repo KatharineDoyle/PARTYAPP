@@ -30,13 +30,13 @@ if (mapElement) { // only build a map if there's a div#map to inject into
       .setLngLat([marker.lng, marker.lat])
       .addTo(map);
   })
-  // markers.forEach((marker) => {
-  //   new mapboxgl.Marker()
-  //     .setLngLat([marker.lng, marker.lat])
-  //     .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-  //     .setHTML(marker.infoWindow.content))
-  //     .addTo(map);
-  // })
+  markers.forEach((marker) => {
+    new mapboxgl.Marker()
+    .setLngLat([marker.lng, marker.lat])
+    .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+       .setHTML(marker.infoWindow.content))
+       .addTo(map);
+   })
   if (markers.length === 0) {
     map.setZoom(1);
   } else if (markers.length === 1) {
@@ -52,6 +52,7 @@ if (mapElement) { // only build a map if there's a div#map to inject into
   map.addControl(new MapboxGeocoder({
     accessToken: mapboxgl.accessToken
   }));
+  map.scrollZoom.disable();
 }
 
 
