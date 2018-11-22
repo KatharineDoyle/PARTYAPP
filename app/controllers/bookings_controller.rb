@@ -30,7 +30,6 @@ class BookingsController < ApplicationController
   end
 
   def destroy
->>>>>>> 282bcf928deb0e53110c98412700160fa1b2c2d8
   end
 
   private
