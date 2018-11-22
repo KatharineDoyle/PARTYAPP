@@ -8,17 +8,6 @@
 </div>
 
 <div class="index-wrapper">
-<<<<<<< HEAD
-  <div class="container">
-    <div class="row">
-      <% if @spaces.count >= 1 %>
-        <% @spaces.each do |space| %>
-          <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path space.photo, width: 300, height: 300, crop: :fill unless space.photo.blank? %>')">
-              <div class="card-description">
-                <h2><%= space.name %></h2>
-                <p><%= space.reviews.count == 1 ? "1 review" : "#{space.reviews.count} reviews" %></p>
-=======
   <div class="main-container">
         <div class="card-container">
           <div class="row">
@@ -44,7 +33,6 @@
             data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
             </div>
                 </div>
->>>>>>> 282bcf928deb0e53110c98412700160fa1b2c2d8
               </div>
             </div>
         </div>
