@@ -13,7 +13,6 @@
             <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path space.photo, width: 300, height: 300, crop: :fill unless space.photo.blank? %>')">
               <div class="card-description">
                 <h2><%= space.name %></h2>
-                </p>
                 <p><%= space.reviews.count == 1 ? "1 review" : "#{space.reviews.count} reviews" %></p>
               </div>
               <a class="card-link" href=<%= space_path(space) %>></a>
