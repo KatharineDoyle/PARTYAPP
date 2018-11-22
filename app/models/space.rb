@@ -10,6 +10,7 @@ class Space < ApplicationRecord
 
   mount_uploader :photo, PhotoUploader
 
+  has_many :reviews, through: :doses
   has_many :reviews, dependent: :destroy
   has_many :bookings, dependent: :destroy
   belongs_to :user
