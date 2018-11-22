@@ -30,8 +30,8 @@
                   <p><%= space.address %></p>
                   <p>Available <%= space.availability ? "✅" : "🚫" %></p>
                   <% if policy(space).create? %>
-                  <% end %>
                   <p><%= link_to 'Check it out', space_path(space), class: "btn btn-primary" %></p>
+                  <% end %>
                   <% if policy(space).edit? %>
                     <p><%= link_to 'Edit', edit_space_path(space),  class: "btn btn-primary" %></p>
                   <% end %>
@@ -46,7 +46,6 @@
       </div>
    </div>
   </div>
-        <% end %>
         <%= link_to 'Add a space!', new_space_path %>
       </div>
     </div>
@@ -57,6 +56,3 @@
           <p><%= link_to 'New Space', new_space_path %></p>
         </div>
 </div>
-
-
-
