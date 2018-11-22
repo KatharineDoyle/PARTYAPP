@@ -1,11 +1,11 @@
 // Import Google fonts
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
-@import url('https://fonts.googleapis.com/css?family=Chivo:400,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black|Fjalla+One|Libre+Franklin|Source+Sans+Pro');
+
 
 
 // Define fonts for body and headers
-$body-font: "Open Sans", "Helvetica", "sans-serif";
-$headers-font: "Chivo", "Chivo", "sans-serif";
+$body-font: "Source Sans Pro", "Libre Fanklin", "sans-serif";
+$headers-font: "Archivo", "Fjalla One", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
@@ -15,4 +15,4 @@ $headers-font: "Chivo", "Chivo", "sans-serif";
 //        font-url('FontFile.woff') format('woff'),
 //        font-url('FontFile.ttf') format('truetype')
 // }
-// $my-font: "Font Name";
+// $my-font: "Font Name"
