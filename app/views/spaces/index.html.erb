@@ -1,46 +1,24 @@
+<h1>🎉PARTYAPP🎉</h1>
 <p id="notice"><%= notice %></p>
+<div class="container main">
+<h4><%= link_to 'Add a space!', new_space_path, class: "btn btn-primary" %></h4>
 
-<div class="container">
-<h1 id="spaces-title">Spaces</h1>
-
-<!-- <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-</table> -->
-
-<br><br>
-
-     <div class="row">
-      <div class="row">
+<div class="index-wrapper">
+  <div class="container">
+    <div class="row">
+      <% if @spaces.count >= 1 %>
         <% @spaces.each do |space| %>
-          <div class="col-xs-12 col-sm-6 lg-4">
-            <div class="card-space">
-                <h4><%= space.name %></h4>
-                  <p><%= space.description %></p>
-                  <p>Capacity <%= space.capacity %></p>
-                  <p><%= space.address %></p>
-                  <p>Available <%= space.availability ? "✅" : "🚫" %></p>
-                  <% if policy(space).create? %>
-                  <% end %>
-                  <p><%= link_to 'Check it out', space %></p>
-                  <% if policy(space).edit? %>
-                    <p><%= link_to 'Edit', edit_space_path(space) %></p>
-                  <% end %>
-                  <% if policy(space).destroy? %>
-                    <p><%= link_to 'Destroy', space, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-                  </div>
-                </div>
-              <% end %>
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path space.photo, width: 300, height: 300, crop: :fill unless space.photo.blank? %>')">
+              <div class="card-description">
+                <h2><%= space.name %></h2>
+                </p>
+              </div>
+              <a class="card-link" href=<%= space_path(space) %>></a>
             </div>
           </div>
-          <% end %>
-        <div class="card col-xs-12 col-sm-6 lg-4">
-          <p><%= link_to 'New Space', new_space_path %></p>
-        </div>
-
+        <% end %>
+      <% end %>
+    </div>
+  </div>
 </div>
