@@ -24,7 +24,7 @@
         <br><br>
         <% if policy(@space).edit? %>
         <% end %>
-        <p> <%= link_to "Book your party", space_bookings_path(@space), class: "btn btn-primary" %></p>
+        <p> <%= link_to "Book your party", space_bookings_path(@booking), class: "btn btn-primary" %></p>
         <% if policy(@space).edit? %>
         <% end %>
         <%= link_to 'Back', spaces_path %>
