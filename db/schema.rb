@@ -17,6 +17,7 @@
     t.string "date"
     t.string "theme"
     t.bigint "user_id"
+    t.bigint "spaces_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "space_id"
@@ -62,6 +63,7 @@
   end
 
   add_foreign_key "bookings", "spaces"
+  add_foreign_key "bookings", "spaces", column: "spaces_id"
   add_foreign_key "bookings", "users"
   add_foreign_key "reviews", "bookings"
   add_foreign_key "reviews", "spaces"

@@ -25,17 +25,19 @@ class BookingsController < ApplicationController
   end
 
   def show
+    @booking
     @space = @booking.space
   end
 
   def destroy
+>>>>>>> 282bcf928deb0e53110c98412700160fa1b2c2d8
   end
 
   private
 
   def find_and_authorize_current_booking
     @booking = Booking.find(params[:id])
-    authorize @booking
+    # authorize @booking
   end
 
   def booking_params
