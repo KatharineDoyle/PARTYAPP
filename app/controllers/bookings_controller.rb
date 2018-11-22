@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
     @booking.space = @space
     @booking.user = current_user
     if @booking.save!
-      redirect_to bookings_path, notice: 'Booking was successfully created.'
+      redirect_to space_booking_path(@space, @booking), notice: 'Booking was successfully created.'
     else
       redirect_to space_path(@space)
     end
@@ -25,6 +25,10 @@ class BookingsController < ApplicationController
   end
 
   def show
+    @space = @booking.space
+  end
+
+  def destroy
     @booking
   end
 
