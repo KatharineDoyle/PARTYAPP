@@ -1,9 +1,20 @@
 <%= simple_form_for ([@space, @booking]) do  |b|  %>
-<%= b.input :theme , class: 'form-control' %>
+<div class="form-group row">
+  <div class="col-md-4 mb-3">
+  <%= b.input :theme , class: 'form-control' %>
+  </div>
 </div>
-<div class="form-group">
-  <%= b.input :date, class: 'form-control' %>
+<div class="form-group row">
+  <div class="col-md-4 mb-3">
+  <%= b.input :date, input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') } %>
 </div>
-<div class="form-actions">
-    <%= b.button :submit class: "btn btn-primary" %>
+</div>
+    <%= b.button :submit, class: 'btn btn-primary' %>
 <% end %>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
+</script>
+
