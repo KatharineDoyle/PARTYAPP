@@ -1,1 +1,9 @@
-<p><%= @booking.date.to_date.strftime('%A, %b %d') %><p>
+<h1>Congratulations!</h1>
+<h2>Here is your booking:</h2>
+
+<%= @space.name %>
+<%= @space.description %>
+<p><%= @booking.date.to_date.strftime('%A, %b %d') %></p>
+<%= link_to 'See my bookings', bookings_path, class: 'btn btn-primary' %>
+<%= link_to 'Search more party spaces', spaces_path, class: 'btn btn-primary' %>
+<%= link_to 'Add a review', new_booking_review_path(@booking), class: 'btn btn-primary' %>
