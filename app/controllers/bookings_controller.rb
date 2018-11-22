@@ -21,6 +21,7 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = Booking.where(user_id: current_user.id)
+    # @space = Space.find(params[:space_id])
   end
 
   def show
@@ -28,6 +29,7 @@ class BookingsController < ApplicationController
   end
 
   def destroy
+    @booking
   end
 
   private
