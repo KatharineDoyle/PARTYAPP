@@ -1,48 +1,71 @@
 body {
   font-size:100%;
   line-height:1.5;
-  // background-image: url('http://mrsocialkeeda.com/wp-content/uploads/2016/12/party-06.jpg')
-  // background: #a770ef; /* fallback for old browsers */
-  // background: -webkit-linear-gradient(to bottom, #a770ef, #cf8bf3, #fdb99b); /* Chrome 10-25, Safari 5.1-6 */
-  // background: linear-gradient(to bottom, #a770ef, #cf8bf3, #fdb99b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: white;
 }
 * {
   box-sizing: border-box
 }
-
+h1 {
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: 30px;
+  text-align: center;
+  color: $green;
+}
+.btn-letsgo {
+border-radius: 57% 43% 61% 39% / 31% 45% 55% 69%;
+width: 100px;
+height: 100px;
+}
+.btn-listspace {
+border-radius: 40% 60% 55% 45% / 41% 30% 70% 59%;
+width: 384px;
+height: 384px;
+}
+.main-container {
+  padding: 26px;
+}
 h1, h2, h3, h4 {
   font-family: 'Chivo', sans-serif;
-  font-weight: 10px;
-  text-align: center;
-  color: black;
 }
-
-// .main {
-//   background-image:
-// }
-
+.wrapper {
+  margin-right: auto; /* 1 */
+  margin-left:  auto; /* 1 */
+  padding-right: 10px; /* 3 */
+  padding-left:  10px; /* 3 */
+}
+.form-wrapper {
+  margin-right: auto; /* 1 */
+  margin-left:  auto; /* 1 */
+  max-width: 400px; /* 2 */
+  padding-right: 10px; /* 3 */
+  padding-left:  10px; /* 3 */
+}
+.main-container {
+  display: flex;
+}
 p {
   font-size: 15px;
   color: black;
 }
-
-.card-space {
-  border-radius: 20px;
-  justify-content: center;
+#map {
+  margin-top: 10px;
+  height: 100vh;
+  flex: 0 0 40%;
+  position: sticky !important;
+  top: 0 !important;
+}
+.card-container {
+  width: 70%
 }
 .show-half {
   padding:1em;
   border-radius:5px;
   max-width:15em;
 }
-// .l-grid-half {
-//   width: 50%;
-// }
-
 .l-flex-parent {
   display:flex;
   flex-direction:row;
-
 }
 .l-flex-child {
   padding:1em;
@@ -51,12 +74,12 @@ p {
   display:flex;
   justify-content: center;
   flex-direction: column;
-
 }
 .space-info {
   color:#fff;
   width: 70%;
 }
+
 .map-cal {
   background-color: #fff;
   color:  #7b5a9e;
@@ -72,4 +95,3 @@ p {
   color:#000;
 
 }
-

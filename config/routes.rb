@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     resources :reviews, only: [:new, :create]
   end
 
+  resources :bookings, only: [:index]
+
   devise_for :users
 
   root to: "spaces#index"

@@ -10,8 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_22_140508) do
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,6 +17,7 @@ ActiveRecord::Schema.define(version: 2018_11_22_140508) do
     t.string "date"
     t.string "theme"
     t.bigint "user_id"
+    t.bigint "spaces_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "space_id"
@@ -64,6 +63,7 @@ ActiveRecord::Schema.define(version: 2018_11_22_140508) do
   end
 
   add_foreign_key "bookings", "spaces"
+  add_foreign_key "bookings", "spaces", column: "spaces_id"
   add_foreign_key "bookings", "users"
   add_foreign_key "reviews", "bookings"
   add_foreign_key "reviews", "spaces"
