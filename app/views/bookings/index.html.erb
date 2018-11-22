@@ -18,7 +18,7 @@
         <% @bookings.each do |restaurant| %>
         <% if policy(restaurant).edit? %>
         <%= link_to "Update", edit_booking_path(booking) %>
-        <% end %>
+        <%= link_to, "Add a review", '#'%>
         <% end %>
        </div>
     </div>
