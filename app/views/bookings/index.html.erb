@@ -8,6 +8,7 @@
      <% @bookings.each do |booking| %>
       <div class="col-xs-12 col-sm-6 lg-4">
         <div class="card-space">
+          <%# booking.space = @space %>
         <h2><%= booking.space.name %></h2>
         <%= cl_image_tag(booking.space.photo.path, width: 400, height: 300, crop: :fill, class: "pdt-image hidden-xs" )%>
         <p>Description <strong><%= booking.space.description %></strong></p>

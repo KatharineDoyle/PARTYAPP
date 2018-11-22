@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
     @booking.space = @space
     @booking.user = current_user
     if @booking.save!
-      redirect_to space_bookings_path, notice: 'Booking was successfully created.'
+      redirect_to bookings_path, notice: 'Booking was successfully created.'
     else
       redirect_to space_path(@space)
     end
@@ -21,7 +21,7 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = Booking.where(user_id: current_user.id)
-    @space = Space.find(params[:space_id])
+    # @space = Space.find(params[:space_id])
   end
 
   def show

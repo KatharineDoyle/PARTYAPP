@@ -5,8 +5,10 @@ Rails.application.routes.draw do
   end
 
   resources :spaces do
-    resources :bookings
+    resources :bookings, only: [:show, :new, :create]
   end
+
+  resources :bookings, only: [:index]
 
   devise_for :users
 
