@@ -11,16 +11,16 @@
          <h4>Reviews</h4>
          <ul>
             <% @space.reviews.each do |review| %>
-            <li>
-            <p><%= review.content %></p>
-            </li>
+              <li>
+              <p><%= review.content %></p>
+              </li>
             <% end %>
           </ul>
           <h4>Add a review:</h4>
-           <%= simple_form_for [@space, @review] do |f| %>
+            <%= simple_form_for [@space, @review] do |f| %>
             <%= f.input :content%>
             <%= f.submit %>
-          <% end %>
+            <% end %>
         <br><br>
         <% if policy(@space).edit? %>
         <% end %>
