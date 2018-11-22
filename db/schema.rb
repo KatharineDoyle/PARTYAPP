@@ -17,10 +17,12 @@
     t.string "date"
     t.string "theme"
     t.bigint "user_id"
+    t.bigint "spaces_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "space_id"
     t.index ["space_id"], name: "index_bookings_on_space_id"
+    t.index ["spaces_id"], name: "index_bookings_on_spaces_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
@@ -62,6 +64,7 @@
   end
 
   add_foreign_key "bookings", "spaces"
+  add_foreign_key "bookings", "spaces", column: "spaces_id"
   add_foreign_key "bookings", "users"
   add_foreign_key "reviews", "bookings"
   add_foreign_key "reviews", "spaces"
