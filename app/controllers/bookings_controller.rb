@@ -29,7 +29,6 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-    @booking
   end
 
   private
