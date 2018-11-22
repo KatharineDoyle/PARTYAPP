@@ -6,9 +6,15 @@
 </div>
 <div class="form-group row">
   <div class="col-md-4 mb-3">
-  <%= b.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
-  </div>
+  <%= b.input :date, input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') } %>
+</div>
 </div>
     <%= b.button :submit, class: 'btn btn-primary' %>
 <% end %>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
+</script>
 
