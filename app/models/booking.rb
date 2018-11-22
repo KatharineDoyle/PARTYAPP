@@ -1,7 +1,7 @@
 class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :space
-  has_many :reviews, :through => :bookings
+  has_many :reviews
 
   validates :date, presence: true
   validates :theme, presence: true

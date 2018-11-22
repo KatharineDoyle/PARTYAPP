@@ -15,10 +15,10 @@
         <p>Address: <strong><%= booking.space.address %></strong></p>
         <p>Booked: <strong><%= booking.date %></strong></p>
         <% end %>
-        <% @bookings.each do |restaurant| %>
-        <% if policy(restaurant).edit? %>
+        <% @bookings.each do |booking| %>
+        <%= link_to, "Add a review", new_space_booking_review_path %>
+        <% if policy(booking).edit? %>
         <%= link_to "Update", edit_booking_path(booking) %>
-        <%= link_to, "Add a review", '#'%>
         <% end %>
        </div>
     </div>

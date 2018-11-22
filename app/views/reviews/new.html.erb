@@ -1,5 +1,6 @@
 <h1>Review <%= @space.name %></h1>
-<%= simple_form_for([@space, @review]) do |f| %>
+<%= simple_form_for([@space, @booking, @review]) do |f| %>
     <%= f.input :content %>
     <%= f.submit class: "btn btn-primary" %>
 <% end %>
+
