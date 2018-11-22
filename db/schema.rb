@@ -22,7 +22,6 @@
     t.datetime "updated_at", null: false
     t.bigint "space_id"
     t.index ["space_id"], name: "index_bookings_on_space_id"
-    t.index ["spaces_id"], name: "index_bookings_on_spaces_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
