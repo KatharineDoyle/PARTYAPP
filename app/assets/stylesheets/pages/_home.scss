@@ -56,6 +56,9 @@ p {
   top: 0 !important;
 }
 .card-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 3em 0 3em;
   width: 70%
 }
 .show-half {
