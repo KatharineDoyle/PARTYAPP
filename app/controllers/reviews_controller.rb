@@ -1,17 +1,16 @@
 class ReviewsController < ApplicationController
-  before_action :set_review, only: [:show, :edit]
-
   def new
-    @space = Space.find(params[:space_id])
     @booking = Booking.find(params[:booking_id])
+    @space = @booking.space
     @review = Review.new
   end
 
   def create
-    @space = Space.find(params[:space_id])
     @booking = Booking.find(params[:booking_id])
+    @space = @booking.space
     @review = Review.new(review_params)
-    @review.space = @space
+    @review.booking = @booking
+    @review.booking.space = @space
     if @review.save!
       redirect_to space_path(@space)
     else
@@ -21,11 +20,7 @@ class ReviewsController < ApplicationController
 
   private
 
-  def set_review
-    @review = Review.find(params[:id])
-  end
-
   def review_params
-    params.require(:review).permit(:content)
+    params.require(:review).permit(:content, :booking_id)
   end
 end

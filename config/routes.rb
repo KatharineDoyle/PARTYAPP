@@ -1,19 +1,13 @@
 Rails.application.routes.draw do
 
   resources :spaces do
-    resources :bookings do
-      resources :reviews, only: [ :new, :create, :destroy, :edit ]
-    end
-  end
-
-  resources :spaces do
     resources :bookings, only: [:show, :new, :create, :destroy, :edit]
   end
 
-  resources :bookings, only: [:index]
+  resources :bookings, only: [:destroy]
 
-  resources :spaces do
-    resources :reviews, only: [:index, :show]
+  resources :bookings, only: [:index, :show] do
+    resources :reviews, only: [:new, :create]
   end
 
   devise_for :users

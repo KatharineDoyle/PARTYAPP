@@ -4,24 +4,24 @@
 
 <div class="container">
   <div class="row">
-    <div class="row">
      <% @bookings.each do |booking| %>
       <div class="col-xs-12 col-sm-6 lg-4">
         <div class="card-space">
           <%# booking.space = @space %>
+        <% if booking.user == current_user %>
         <h2><%= booking.space.name %></h2>
         <%= cl_image_tag(booking.space.photo.path, width: 400, height: 300, crop: :fill, class: "pdt-image hidden-xs" )%>
         <p>Description <strong><%= booking.space.description %></strong></p>
         <p>Address: <strong><%= booking.space.address %></strong></p>
         <p>Booked: <strong><%= booking.date %></strong></p>
-        <% end %>
-        <% @bookings.each do |booking| %>
-        <%= link_to, "Add a review", new_space_booking_review_path %>
+        <%= link_to "Add a review", new_booking_review_path(booking), class: "btn btn-primary" %>
         <% if policy(booking).edit? %>
-        <%= link_to "Update", edit_booking_path(booking) %>
+          <%= link_to "Update", edit_booking_path(booking), class: "btn btn-primary"  %>
         <% end %>
-       </div>
+        <% end %>
+      </div>
     </div>
+   <% end %>
   </div>
 </div>
 
