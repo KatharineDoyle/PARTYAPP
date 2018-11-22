@@ -8,6 +8,7 @@
         <%= cl_image_tag @space.photo, height: 400, width: 800, crop: :fill %>
         <p><%= @space.description %></p>
         <p><%= @space.address %></p>
+
          <h4>Reviews</h4>
          <ul>
             <% @space.reviews.each do |review| %>
@@ -16,17 +17,9 @@
               </li>
             <% end %>
           </ul>
-          <h4>Add a review:</h4>
-            <%= simple_form_for [@space, @review] do |f| %>
-            <%= f.input :content%>
-            <%= f.submit %>
-            <% end %>
+
         <br><br>
-        <% if policy(@space).edit? %>
-        <% end %>
         <p> <%= link_to "Book your party", new_space_booking_path(@space), class: "btn btn-primary" %></p>
-        <% if policy(@space).edit? %>
-        <% end %>
         <%= link_to 'Back', spaces_path %>
       </div>
       </div>
