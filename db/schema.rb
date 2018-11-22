@@ -10,6 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 2018_11_22_140508) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,6 +24,7 @@
     t.datetime "updated_at", null: false
     t.bigint "space_id"
     t.index ["space_id"], name: "index_bookings_on_space_id"
+    t.index ["spaces_id"], name: "index_bookings_on_spaces_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
