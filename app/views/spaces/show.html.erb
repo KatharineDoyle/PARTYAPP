@@ -24,16 +24,16 @@
          <h4>Reviews</h4>
          <ul>
             <% @space.reviews.each do |review| %>
-            <li>
-            <p><%= review.content %></p>
-            </li>
+              <li>
+              <p><%= review.content %></p>
+              </li>
             <% end %>
           </ul>
-        <h4>Add a review:</h4>
-          <%= simple_form_for [@space, @review] do |f| %>
-          <%= f.input :content%>
-          <%= f.submit %>
-          <% end %>
+          <h4>Add a review:</h4>
+            <%= simple_form_for [@space, @review] do |f| %>
+            <%= f.input :content%>
+            <%= f.submit %>
+            <% end %>
         <br><br>
         <% if policy(@space).edit? %>
         <% end %>
@@ -60,6 +60,7 @@
   </div>
 </div>
 </div>
+<<<<<<< HEAD
 
 <% end %>
 
@@ -67,3 +68,5 @@
 
 =======
 >>>>>>> 810ca36c7d062eb6d56835e329526f5735237b12
+=======
+>>>>>>> 5d233e6bd8e59b3dc1fc545fe1442571704fcc90
