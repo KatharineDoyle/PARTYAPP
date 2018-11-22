@@ -6,7 +6,7 @@
     <a class="btn-listspace btn-primary btn-lg">Add a space!</a>
   </div>
 </div>
-<div class="index-wrapper">
+
   <div class="main-container">
         <div class="card-container">
           <div class="row">
@@ -23,16 +23,13 @@
                         <% end %>
                       <% end %>
                     </div>
-                  </div>
-           <div
+
+              </div>
+            <div
             id="map"
             style="width: 100%;
             height: 600px;"
             data-markers="<%= @markers.to_json %>"
             data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
             </div>
-                </div>
-              </div>
-            </div>
         </div>
-    </div>

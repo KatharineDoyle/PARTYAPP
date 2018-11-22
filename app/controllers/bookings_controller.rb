@@ -25,7 +25,6 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @booking
     @space = @booking.space
   end
 
