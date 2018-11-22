@@ -1,1 +1,7 @@
-<p><%= @booking.date.to_date.strftime('%A, %b %d') %><p>
+<h1>Congratulations!</h1>
+<h2>Here is your booking:</h2>
+
+<%= @booking %>
+<%= @space.name %>
+<%= @space.description %>
+<p><%= @booking.date.to_date.strftime('%A, %b %d') %></p>
