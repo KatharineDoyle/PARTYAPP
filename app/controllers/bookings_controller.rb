@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :find_and_authorize_current_booking, only: [:show, :edit, :update, :destroy, :create]
+  before_action :find_and_authorize_current_booking, only: [:show, :edit, :update, :destroy]
 
   def new
     @user = current_user
@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
     @booking.space = @space
     @booking.user = current_user
     if @booking.save!
-      redirect_to space_booking_path(@booking), notice: 'Booking was successfully created.'
+      redirect_to space_booking_path(@space, @booking), notice: 'Booking was successfully created.'
     else
       redirect_to space_path(@space)
     end
@@ -21,23 +21,19 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = Booking.where(user_id: current_user.id)
-    # @space = Space.find(params[:space_id])
   end
 
   def show
-    # @booking = Booking.find(params[:id])
     @space = @booking.space
   end
 
   def destroy
-
   end
 
   private
 
   def find_and_authorize_current_booking
     @booking = Booking.find(params[:id])
-    raise
     authorize @booking
   end
 

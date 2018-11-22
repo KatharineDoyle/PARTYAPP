@@ -1,22 +1,19 @@
 class BookingPolicy < ApplicationPolicy
-  attr_reader :user, :booking
-
-  def initialize(user, booking)
-    @user = user
-    @booking = booking
+  def index?
+    booking.user == user
   end
 
-  def index?
+  def show?
+    booking.user == user
+  end
+
+  def booking
+    record
+  end
+
+  def create?
     record.user == user
   end
-
-  # def show?
-  #   record.user == user
-  # end
-
-  # def create?
-  #   record.user == user
-  # end
 
   class Scope < Scope
     def resolve
