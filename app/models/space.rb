@@ -1,6 +1,6 @@
 class Space < ApplicationRecord
 
-  include Pgsearch
+  # include Pgsearch
 
 
   geocoded_by :address
@@ -18,10 +18,10 @@ class Space < ApplicationRecord
   has_many :reviews, through: :bookings, dependent: :destroy
   belongs_to :user
 
-  pg_search_scope :search_by_title,
-    against: [:name],
-    using: {
-
-    }
+  # pg_search_scope :search_by_title,
+  #   against: [:name],
+  #   using: {
+  #     nsearch: { prefix: true}
+  #   }
 
 end
