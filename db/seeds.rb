@@ -10,39 +10,45 @@ puts 'Cleaning database...'
 Space.destroy_all
 
 puts 'Creating spaces...'
-spaces_attributes = [
-  {
+space1 = Space.new(
     name:         "Le Wagon Berlin",
     address:      "Rudi-Dutschke-Straße 26, 10969 Berlin",
     description:  "Coding Bootcamp and party space. Big beer fridge and beer pong set!",
     capacity:      300,
     availability:  true,
-    user_id:       1
-  },
-  {
+    user_id:       1)
+space1.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1542382971/hothoneybutter.jpg'
+space1.save!
+space2 = Space.new(
     name:         "Techno Van",
     address:      "Möckernstraße 26, 10963 Berlin",
     description:  "Small van we use for AirBnB and techno parties.",
     capacity:      10,
     availability:  true,
     user_id:       2
-  },
-  {
+  )
+  space1.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1542382971/hothoneybutter.jpg'
+  pace1.save!
+  space3 = Space.new(
     name:         "Naturkundesmuseum",
     address:      "Invalidenstraße 43, 10115 Berlin",
     description:  "Entire museum. Party with Tristan.",
     capacity:      3000,
     availability:  true,
     user_id:       1
-  },
-  {
+  )
+  space1.remote_photo_url = ''
+  space1.save!
+  space4 = Space.new(
     name:         "Tent in Tempelhof",
     address:      "Platz der Luftbrücke 5, 12101 Berlin",
     description:  "Five person tent pitched in the middle of Tempelhof. Daytime parties only.",
     capacity:      5,
     availability:  true,
     user_id:       2
-  },
+    )
+  space1.remote_photo_url = ''
+  space1.save!
     {
     name:         "IKEA",
     address:      "Sachsendamm 47, 10829 Berlin",
@@ -51,7 +57,7 @@ spaces_attributes = [
     availability:  true,
     user_id:       2
   }
-]
+  space1.remote_photo_url = ''
+  space1.save!
 
-Space.create!(spaces_attributes)
 puts 'Finished!'

@@ -14,10 +14,10 @@
   </head>
   <body>
 
-    <%= render 'layouts/navbar' %>
+    <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    <%= render 'layouts/footer' %>
     <%= yield %>
+    <%= render 'layouts/footer' %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
     <%= javascript_pack_tag "map" %>

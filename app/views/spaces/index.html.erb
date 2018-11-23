@@ -1,43 +1,32 @@
   <div class="wrapper" id="spaces">
     <div class="jumbotron" id="intro">
       <h1 style="color: #f87d42" id="spaceintro">PARTYMAKER</h1>
-      <p style="color: #706381" id="spaceintro"><i>Find the perfect space to party</i></p>
+      <p style="color: #706381" id="spaceintro">Find the perfect space to party</p>
     </div>
-    <div class="card-columns">
       <div class="buttonbox">
-        <p style="display:inline-block;;"><%= link_to 'LIST YOUR SPACE', new_space_path, class: "btn btn-light" %></p>
+        <p style="display:inline-block;;"><%= link_to 'LIST YOUR SPACE', new_space_path, class: "btn btn-primary" %></p>
+      </div>
 
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path space.photo, width: 300, height: 300, crop: :fill unless space.photo.blank? %>');">
-          <div class="card-category">Popular</div>
-          <div class="card-description">
-            <h2>Le Wagon Shanghai</h2>
-            <p>Very cool city, the best</p>
-          </div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-          <a class="card-link" href="#" ></a>
-        </div>
 
-        <div class="container">
-          <p id="aboutspaces"><i>Browse spaces:</i></p>
+    <div class="container">
+      <p id="aboutspaces">Browse spaces:</p>
           <div class="row" id="spacecards">
             <% if @spaces.count >= 1 %>
             <% @spaces.each do |space| %>
-            <div class="col-xs-12 col-sm-6 col-md-4" id="cardcol">
+            <div class="col-xs-12 col-sm-12 col-md-12" id="cardcol">
               <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path space.photo, width: 300, height: 300, crop: :fill unless space.photo.blank? %>')">
-                <div class="card-info">
-                  <h4 id="card-header"><%= space.name %></h4>
-                  <p id="card-info"><%= space.description %></p>
+                <div class="card-category"></div>
+                <div class="card-description">
+                  <h4><%= space.name %></h4>
+                  <p><%= space.description %></p>
                 </div>
                 <a class="card-link" href=<%= space_path(space) %>></a>
               </div>
             </div>
             <% end %>
-            <% end %>
-          </div>
-          <div class="jumbotron" id="intro">
+          <% end %>
           </div>
         </div>
       </div>
-    </div>
 
 
