@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  root to: "spaces#index"
+  root to: "pages#home"
 end
 
 
