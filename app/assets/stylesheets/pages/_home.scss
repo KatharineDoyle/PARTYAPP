@@ -51,6 +51,10 @@
 //   article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 //   display: block; }
 
+
+.wrapper {
+
+}
 body {
   background-color: #fa0559
 }
@@ -115,7 +119,49 @@ body {
 }
 
 .card-link {
-  width: 500px;
+  width: 100%;
+}
+
+
+// show //
+.photomap {
+  border-radius: 2px;
+}
+
+.space-profile {
+  margin: 20px;
+  padding-top: 6em;
+  border-radius: 11px;
+}
+
+#bookbutton {
+  justify-content: right;
+}
+
+.btn {
+  width: 197px;
+  border-radius: 11px;
+}
+
+#name-profile {
+  font-size: 43px;
+  text-align: center;
+  margin-top: 8em;
+}
+
+#address-profile {
+  font-size: 28px;
+}
+#description-profile {
+  font-size: 20px;
+}
+
+#address-profile {
+  font-size: 20px;
+}
+
+#review-header {
+  font-size: 20px;
 }
 
 
