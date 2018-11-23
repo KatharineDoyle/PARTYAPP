@@ -11,14 +11,18 @@
 
   <div class="wrapper" id="spaces">
     <div class="jumbotron" id="intro">
-      <h2 id="spaceintro">Spaces To Party</h2>
-        <p id="spaceintro"><i>for when you really need space to party</i></p>
+      <h1 id="spaceintro">PartyApp</h2>
+        <p id="spaceintro"><i>find the perfect space to party</i></p>
+
+
 
     </div>
-        <div class="jumotron">
-          <p id="aboutspaces">Recommendations near you:</p>
-        </div>
+          <div class="buttonbox">
+
+          <p style="display:inline-block;;"><%= link_to 'Add a space',spaces_path(@new), class: "btn btn-primary" %></p>
+                      <p style="display:inline-block;"><%= link_to 'Search',spaces_path(@new), class: "btn btn-primary" %></p></div>
         <div class="card-columns">
+          <p id="aboutspaces">Recommendations near you:</p>
           <div class="row" id="spacecards">
             <% if @spaces.count >= 1 %>
               <% @spaces.each do |space| %>
@@ -35,8 +39,8 @@
                       <% end %>
                     </div>
                     <div class="jumbotron" id="intro">
-                    </div>
 
+                    </div>
               </div>
          <!--    <div
             id="map"
@@ -46,3 +50,15 @@
             data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
             </div> -->
         </div>
+
+        <div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+  </div>
+</div>

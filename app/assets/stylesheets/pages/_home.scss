@@ -80,6 +80,10 @@ body {
   font-size: 21px;
 }
 
+.buttonbox {
+  margin-left: 297px;
+}
+
 #card-info {
   justify-content: center;
   margin-top: -24px;
@@ -96,6 +100,11 @@ body {
     margin: 0 auto;
 }
 
+#form {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 10em;
+}
 #spaceshow {
   width: 1000px;
   margin: 0 auto;
@@ -146,7 +155,7 @@ body {
 #name-profile {
   font-size: 43px;
   text-align: center;
-  margin-top: 8em;
+  margin-top: 10em;
 }
 
 #address-profile {
