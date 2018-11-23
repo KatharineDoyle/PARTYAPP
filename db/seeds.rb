@@ -27,8 +27,8 @@ space2 = Space.new(
     availability:  true,
     user_id:       2
   )
-  space1.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1542382971/hothoneybutter.jpg'
-  pace1.save!
+  space2.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1542382971/hothoneybutter.jpg'
+  space2.save!
   space3 = Space.new(
     name:         "Naturkundesmuseum",
     address:      "Invalidenstraße 43, 10115 Berlin",
@@ -37,8 +37,8 @@ space2 = Space.new(
     availability:  true,
     user_id:       1
   )
-  space1.remote_photo_url = ''
-  space1.save!
+  space3.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1542981957/tristan.jpg'
+  space3.save!
   space4 = Space.new(
     name:         "Tent in Tempelhof",
     address:      "Platz der Luftbrücke 5, 12101 Berlin",
@@ -47,8 +47,9 @@ space2 = Space.new(
     availability:  true,
     user_id:       2
     )
-  space1.remote_photo_url = ''
-  space1.save!
+  space4.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1542981755/Tent-in-tempelhof.jpg'
+  space4.save!
+  space5 = Space.new(
     {
     name:         "IKEA",
     address:      "Sachsendamm 47, 10829 Berlin",
@@ -57,7 +58,32 @@ space2 = Space.new(
     availability:  true,
     user_id:       2
   }
-  space1.remote_photo_url = ''
-  space1.save!
+  space5.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1542981694/IKEA-Space10-Living-Lab-1.jpg'
+  space5.save!
+  )
+    space4 = Space.new(
+    name:         "Tent in Tempelhof",
+    address:      "Platz der Luftbrücke 5, 12101 Berlin",
+    description:  "Five person tent pitched in the middle of Tempelhof. Daytime parties only.",
+    capacity:      5,
+    availability:  true,
+    user_id:       2
+    )
+  space6.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1542981755/Tent-in-tempelhof.jpg'
+  space6.save!
+  space7 = Space.new(
+    {
+    name:         "IKEA",
+    address:      "Sachsendamm 47, 10829 Berlin",
+    description:  "Huge furniture warehouse. Perfect for raves.",
+    capacity:      5000,
+    availability:  true,
+    user_id:       2
+  }
+  space7.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1542981694/IKEA-Space10-Living-Lab-1.jpg'
+  space7.save!
+  )
+
+
 
 puts 'Finished!'
