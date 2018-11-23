@@ -21,9 +21,10 @@
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
   </div>
-  <div style="width:800px;">
-        <p id="description-profile"><%= @space.description %></p>
+  <div class="description-container" style="width:800px;">
         <p id="address-profile"><%= @space.address %></p>
+        <p id="description-profile"><%= @space.description %></p>
+        <p id="description-profile"><%= @space.price %></p>
           <h2 id="review-header">Reviews:</h4>
           <ul>
             <% @space.reviews.each do |review| %>
@@ -32,10 +33,10 @@
             </li>
             <% end %>
          </ul>
-        <p style="text-align:center; width: 130%"> <%= link_to "Book", new_space_booking_path(@space), class: "btn btn-primary" %></a>
+        <%= link_to "Book", new_space_booking_path(@space), class: "btn btn-primary" %>
         <% if policy(@space).edit? %>
         <% end %>
-       <!--  <p style="text-align:center;"><%= link_to 'Back',spaces_path, class: "btn btn-primary" %></p> -->
+       <%= link_to 'Back',spaces_path, class: "btn btn-primary" %>
         </div>
      </div>
 
