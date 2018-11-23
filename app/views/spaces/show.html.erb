@@ -1,38 +1,42 @@
-<div class="main-container">
-  <div class="l-flex-parent">
-      <div class="space-info l-flex-child l-grid-half">
-        <!-- <h2 class="text-center"><%= @space.name %></h2> -->
-        <div class="example-item">
-        <%= cl_image_tag @space.photo, height: 400, width: 800, crop: :fill %>
-        <p><%= @space.description %></p>
-        <p><%= @space.address %></p>
-         <h4>Reviews</h4>
-         <ul>
-            <% @space.reviews.each do |review| %>
-              <li>
-              <p><%= review.content %></p>
-              </li>
-            <% end %>
-          </ul>
-        <br><br>
-        <% if policy(@space).edit? %>
-        <% end %>
-        <p> <%= link_to "Book your party", new_space_booking_path(@space), class: "btn btn-primary" %></p>
-        <% if policy(@space).edit? %>
-        <% end %>
-        <%= link_to 'Back', spaces_path %>
-      </div>
-      </div>
-              <div class="map-cal l-grid-half">
-                  <div
-                  id="map"
-                  style="width: 300px;
-                  height: 300px;"
-                  data-markers="<%= @markers.to_json %>"
-                  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-              </div>
-            </div>
-          </div>
-        </div>
+
+
+
+
+  <div class="wrapper" id="spaceshow">
+    <div class="jumbotron" id="intro">
+      <h2 id="spaceintro"><%= @space.name %></h2>
+        <!-- <p id="spaceintro"><i>for when you really need space to party</i></p> -->
+    </div>
+    <div style="width: 60%; float:left">
+        <div class="photomap">
+        <%= cl_image_tag @space.photo, height: 400, width: 600, crop: :fill %>
       </div>
     </div>
+    <div style="width: 40%; float:right">
+        <div
+        id="map"
+        style="width: 400px;
+        height: 400px;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+  </div>
+  <div style="width:800px;">
+        <p id="description-profile"><%= @space.description %></p>
+        <p id="address-profile"><%= @space.address %></p>
+          <h2 id="review-header">Reviews:</h4>
+          <ul>
+            <% @space.reviews.each do |review| %>
+            <li>
+            <p><%= review.content %></p>
+            </li>
+            <% end %>
+         </ul>
+        <p style="text-align:center; width: 130%"> <%= link_to "Book", new_space_booking_path(@space), class: "btn btn-primary" %></a>
+        <% if policy(@space).edit? %>
+        <% end %>
+       <!--  <p style="text-align:center;"><%= link_to 'Back',spaces_path, class: "btn btn-primary" %></p> -->
+        </div>
+     </div>
+
+</div>
