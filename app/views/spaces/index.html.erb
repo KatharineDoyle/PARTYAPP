@@ -18,8 +18,8 @@
     </div>
         <div class="card-columns">
           <div class="buttonbox">
-          <p style="display:inline-block;;"><%= link_to 'LIST YOUR SPACE',spaces_path(@new), class: "btn btn-primary" %></p>
-                      <p style="display:inline-block;"><%= link_to 'SEARCH', spaces_path(@new), class: "btn btn-primary" %></p></div>
+          <p style="display:inline-block;;"><%= link_to 'LIST YOUR SPACE',spaces_path(@new), class: "btn btn-light" %></p>
+                      <p style="display:inline-block;"><%= link_to 'SEARCH', spaces_path(@new), class: "btn btn-light" %></p></div>
           <p id="aboutspaces"><i>Recommendations near you:</i></p>
           <div class="row" id="spacecards">
             <% if @spaces.count >= 1 %>
