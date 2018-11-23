@@ -9,15 +9,7 @@
   background-position: center;
   color: white;
   position: relative;
-  margin: 10px 0 20px 0;
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-}
-.card-user {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 40px;
-  border-radius: 50%;
+  margin: 30px;
 }
 .card-category {
   position: absolute;
@@ -30,10 +22,8 @@
   position: absolute;
   bottom: 10px;
   left: 10px;
-  height: 100px;
-  height: 200px;
 }
-.card-description h2 {
+.card-description h4 {
   font-size: 24px;
 }
 .card-description p {
@@ -54,3 +44,4 @@
 .card-link:hover {
   opacity: 0.1;
 }
+

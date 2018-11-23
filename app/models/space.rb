@@ -11,6 +11,7 @@ class Space < ApplicationRecord
   # validates :description, presence: true
   validates :availability, presence: true, inclusion: { in: [true, false] }
   validates :capacity, numericality: { only_integer: true }
+  validates :price, numericality: { only_integer: true }
 
   mount_uploader :photo, PhotoUploader
 
