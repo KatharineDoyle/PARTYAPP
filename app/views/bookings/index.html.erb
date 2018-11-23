@@ -1,3 +1,5 @@
+
+<div class="wrapper" id="spaceshow">
 <div class="text-center padded">
   <h2>All my party venues:</h2>
 </div>
@@ -14,13 +16,14 @@
           <p>Description <strong><%= booking.space.description %></strong></p>
           <p>Address: <strong><%= booking.space.address %></strong></p>
           <p>Booked: <strong><%= booking.date %></strong></p>
-        <% end %>
+
        </div>
+        <% end %>
+         <%= link_to "Add a review", new_booking_review_path(booking), class: "btn btn-primary" %>
     </div>
-        <%= link_to "Add a review", new_booking_review_path(booking), class: "btn btn-primary" %>
+    <div>
         <% if policy(booking).edit? %>
           <%= link_to "Update", edit_booking_path(booking), class: "btn btn-primary"  %>
-        <% end %>
         <% end %>
       </div>
     </div>
@@ -29,5 +32,7 @@
 </div>
 
 <%= link_to 'Back to search', spaces_path(@spaces) %>
+</div>
+
 
 

@@ -52,12 +52,45 @@
 //   display: block; }
 
 
-.wrapper {
 
+.banner {
+  color: white;
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.banner h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+.banner p {
+  font-size: 25px;
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+h2, h3, p {
+  color: white;
+}
+
+label {
+    cursor: default;
+    color: white;
+}
+
 body {
-  background-color: #fa0559
+  // background-color: #fa0559
+  background-color: #2d3999;
+  // background-color: #6a5acd;
 }
+
 
 .jumbotron {
   background-color: transparent;
@@ -65,8 +98,12 @@ body {
 }
 
 #spaceintro {
-
+text-align: center;
+    font-weight: bold;
+    color: white;
+    margin-top: 1em;
 }
+
 
 .svg {
   justify-content: center;
@@ -82,8 +119,12 @@ body {
 
 .buttonbox {
   margin-left: 297px;
+  margin-bottom: 6em;
 }
 
+.card-columns {
+  margin-top: 10em;
+}
 #card-info {
   justify-content: center;
   margin-top: -24px;
@@ -93,6 +134,9 @@ body {
 
 #aboutspaces {
   text-align: center;
+  font-size: 27px;
+  color: white;
+  margin-bottom: 1em;
 }
 
 #spaces {
@@ -104,6 +148,7 @@ body {
   width: 500px;
   margin: 0 auto;
   margin-top: 10em;
+  color: white;
 }
 #spaceshow {
   width: 1000px;
@@ -111,10 +156,19 @@ body {
 }
 
 #intro {
-    border-radius: 2px
+    border-radius: 2px;
+    padding-bottom: 2px;
 }
+
 #blurb {
 
+}
+
+
+
+.btn-primary {
+  background-color: transparent;
+  text-decoration: none;
 }
 
 #spacecards {
@@ -149,7 +203,14 @@ body {
 
 .btn {
   width: 197px;
-  border-radius: 11px;
+  padding: 0;
+  border: none;
+  background: none;
+}
+.btn-hover, .btn-primary:hover {
+    color: #fff;
+    background-color: #efb1ff;
+    border-color: #285e8e;
 }
 
 #name-profile {
@@ -163,6 +224,7 @@ body {
 }
 #description-profile {
   font-size: 20px;
+  margin-top: 23em;
 }
 
 #address-profile {
@@ -170,8 +232,9 @@ body {
 }
 
 #review-header {
-  font-size: 20px;
+  font-size: 21px;
 }
+
 
 
 // .form-wrapper {

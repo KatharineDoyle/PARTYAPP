@@ -9,24 +9,22 @@
  -->
 
 
+
+
   <div class="wrapper" id="spaces">
     <div class="jumbotron" id="intro">
-      <h1 id="spaceintro">PartyApp</h2>
-        <p id="spaceintro"><i>find the perfect space to party</i></p>
-
-
-
+      <h1 style="color: #f87d42" id="spaceintro">PARTYMAKER</h1>
+        <p style="color: #706381" id="spaceintro"><i>Find the perfect space to party</i></p>
     </div>
-          <div class="buttonbox">
-
-          <p style="display:inline-block;;"><%= link_to 'Add a space',spaces_path(@new), class: "btn btn-primary" %></p>
-                      <p style="display:inline-block;"><%= link_to 'Search',spaces_path(@new), class: "btn btn-primary" %></p></div>
         <div class="card-columns">
-          <p id="aboutspaces">Recommendations near you:</p>
+          <div class="buttonbox">
+          <p style="display:inline-block;;"><%= link_to 'LIST YOUR SPACE',spaces_path(@new), class: "btn btn-primary" %></p>
+                      <p style="display:inline-block;"><%= link_to 'SEARCH', spaces_path(@new), class: "btn btn-primary" %></p></div>
+          <p id="aboutspaces"><i>Recommendations near you:</i></p>
           <div class="row" id="spacecards">
             <% if @spaces.count >= 1 %>
               <% @spaces.each do |space| %>
-                <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="col-xs-12 col-sm-6 col-md-4" id="cardcol">
                   <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path space.photo, width: 300, height: 300, crop: :fill unless space.photo.blank? %>')">
                       <div class="card-info">
                         <h4 id="card-header"><%= space.name %></h4>
